@@ -99,15 +99,32 @@
   margin-top: auto;
 }
 
+/* Для устройств с поддержкой hover (десктопы) */
+@media (hover: hover) {
+  .card:hover .card__info {
+    top: 0;
+  }
 
-.card:hover .card__info,
-.card:active .card__info {
-  top: 0;
+  .card:hover .card__info-text {
+    opacity: 1;
+  }
 }
 
-.card:hover .card__info-text,
-.card:active .card__info-text {
-  opacity: 1;
+/* Для touch-устройств (телефоны) - toggle по клику */
+@media (hover: none) {
+  .card.active .card__info {
+    top: 0;
+  }
+
+  .card.active .card__info-text {
+    opacity: 1;
+  }
+
+  /* Улучшаем доступность для touch */
+  .card {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
 }
 
 @container card (min-width: 260px) {
@@ -117,14 +134,11 @@
   .card__info-main h4 span {
     display: none;
   }
-
-
 }
 
 @container card (min-width: 335px) {
   .card__info-price {
     padding: 8px 16px;
-
     max-width: 86px;
     max-height: 40px;
   }
@@ -132,6 +146,4 @@
   .card__info-main h4 span {
     display: block;
   }
-
-
 }

@@ -294,4 +294,29 @@ const loader = new Loader(document.getElementById("loader"))
     //// Для анимации переключение
 
     new SwitcherImgAnimation(".about__imgs-links");
+
+    /// Для переключения карточки
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+      card.addEventListener("click", function () {
+        // Закрываем другие открытые карточки
+        cards.forEach((otherCard) => {
+          if (otherCard !== this) {
+            otherCard.classList.remove("active");
+          }
+        });
+
+        // Переключаем текущую карточку
+        this.classList.toggle("active");
+      });
+
+      // Закрываем карточку при клике вне ее
+      document.addEventListener("click", function (e) {
+        if (!card.contains(e.target)) {
+          card.classList.remove("active");
+        }
+      });
+    });
   });
