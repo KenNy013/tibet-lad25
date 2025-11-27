@@ -1,0 +1,123 @@
+.banner {
+  height: 100dvh;
+  background-image: image-set(url('./../../../assets/imges/banner.webp') type("image/webp"),
+      url('./../../../assets/imges/banner.avif') type("image/avif"), url('./../../../assets/imges/banner.jpg'));
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner__container, .banner__wrapper {
+  height: 100%;
+}
+
+.banner .banner__wrapper {
+  padding-bottom: clamp(50px, 43.60px + 2.00vw, 82px);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.banner .banner__title {
+  margin-top: auto;
+  margin-bottom: 32px;
+}
+
+.banner .banner__open-modal {
+  padding: 16px 36px;
+}
+
+.banner__form {
+  display: none;
+}
+
+.modal-form {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100dvh;
+  width: 100%;
+  padding: 50px;
+  background-color: var(--primary-color);
+  z-index: 500;
+  border: none;
+
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal-form:-webkit-full-screen {
+  background-color: var(--primary-color);
+}
+
+.modal-form[open].is-active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.banner__form[open] {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100dvh;
+  width: 100%;
+  padding: 50px;
+  background-color: var(--primary-color);
+  z-index: 300;
+  border: none;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 24px;
+}
+
+.banner__form[open].is-active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .banner__btn-modal {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner__btn-modal {
+    display: none;
+  }
+
+
+  .banner__form {
+    display: flex;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    padding: 40px 42px;
+    column-gap: clamp(10px, 0.67px + 1.22vw, 24px);
+  }
+
+
+  .banner__form .input-wrapper {
+    width: 100%;
+    max-width: 270px;
+  }
+
+  .banner__form .input-wrapper select {
+    height: 53px;
+  }
+
+  .banner__form .btn {
+    max-width: 213px;
+    height: 52px;
+  }
+}

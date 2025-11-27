@@ -1,0 +1,36 @@
+.direction .direction__title {
+  text-align: center;
+}
+
+.direction__cards {
+  display: flex;
+
+  column-gap: 20px;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.direction__title {
+  margin-bottom: clamp(32px, 27.85px + 1.15vw, 50px);
+}
+
+.direction__card {
+  scroll-snap-align: center;
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+@media (min-width: 1024px) {
+  .direction__cards {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,6 @@
+/* base */
+@import url('./base/index.css');
+/* layout */
+@import url('./layout/index.css');
+/*component*/
+@import url('./components/index.css');

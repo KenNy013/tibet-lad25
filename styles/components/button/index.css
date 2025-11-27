@@ -1,0 +1,77 @@
+.btn {
+  padding: 12px 36px;
+  border-radius: 4px;
+  width: fit-content;
+  height: fit-content;
+
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1.2%;
+
+  white-space: nowrap;
+}
+
+.btn--link {
+  display: inline-block;
+  padding: 12px 36px;
+  border-radius: 4px;
+  width: fit-content;
+
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1.2%;
+
+  white-space: nowrap;
+}
+
+.btn--link--primary {
+  background-color: var(--bg-btn-primary);
+  color: var(--text-white);
+  transition: filter 0.3s ease;
+}
+
+.btn--link--primary:active, .btn--link--primary:focus, .btn--link--primary:hover {
+  filter: brightness(2);
+}
+
+.btn--primary {
+  background-color: var(--bg-btn-primary);
+  color: var(--text-white);
+  transition: filter 0.3s ease;
+}
+
+
+.btn--primary:active, .btn--primary:focus, .btn--primary:hover {
+  filter: brightness(2);
+}
+
+.btn--secondary {
+  background-color: var(--bt--btn-secondary);
+  color: var(--text-black);
+  transition: color 0.3s ease;
+}
+
+.btn--secondary:active, .btn--secondary:focus, .btn--secondary:hover {
+  color: var(--text-yellow);
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-icon--close {
+  position: absolute;
+  top: 27px;
+  right: 16px;
+  color: var(--text-white);
+  display: none;
+}
+
+.is-active .btn-icon--close {
+  display: block;
+}

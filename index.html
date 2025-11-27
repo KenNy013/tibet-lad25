@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная | Рум Тибет</title>
+
+
+
+  <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <script
+          src="https://cdn.jsdelivr.net/npm/choices.js@11.1.0/public/assets/scripts/choices.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+
+  <!-- Лоадер -->
+  <div class="loader-wrapper" id="loader">
+    <span class="loader"></span>
+  </div>
+
+  <!-- Видеомодальное окно -->
+  <dialog class="about-video" data-modal="video-1"
+          data-modal-index="2" data-modal-device="all">
+    <div class="about-video__wrapper">
+      Тут будет видео 1
+    </div>
+    <button class="video__close btn-icon btn-icon--close" data-modal-close="video-1"
+            type="button">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+              fill="currentColor" />
+      </svg>
+    </button>
+  </dialog>
+
+  <dialog class="about-video" data-modal="video-2"
+          data-modal-index="3" data-modal-device="all">
+    <div class="about-video__wrapper">
+      Тут будет видео 2
+    </div>
+    <button class="video__close btn-icon btn-icon--close" data-modal-close="video-2"
+            type="button">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+              fill="currentColor" />
+      </svg>
+    </button>
+  </dialog>
+
+  <!--Просмотр изображений из галлереи -->
+
+  <dialog class="gallery" data-modal="gallery"
+          data-modal-index="4" data-modal-device="all">
+    <div class="gallery__wrapper">
+
+      <img src="" alt="Изображение увеличеное">
+
+    </div>
+    <button class="gallery__close btn-icon btn-icon--close" data-modal-close="gallery"
+            type="button">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+              fill="currentColor" />
+      </svg>
+    </button>
+  </dialog>
+
+  <!-- Шапка сайта -->
+  <header class="header" id="header">
+    <div class="header__container container">
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <a href="./" aria-label="Логотип сайта РумТибет">
+            <img src="./assets/imges/logo.svg" alt="Логотип сайта" />
+          </a>
+        </div>
+        <nav class="header__nav header__modal" data-modal="burger"
+             data-modal-index="0" data-modal-device="mobile">
+          <ul class="header__list-link">
+            <li class="header__link">
+              <a href="" class="a-1" aria-label="Перейти на главную страницу">Главная</a>
+            </li>
+
+            <li class="header__link">
+              <a href="" class="a-1" aria-label="Узнать про гида">Про гида</a>
+            </li>
+
+            <li class="header__link">
+              <a href="" class="a-1" aria-label="Узнать про программы тура">Программа тура</a>
+            </li>
+
+            <li class="header__link">
+              <a href="" class="a-1" aria-label="Узнать стоимость">Стоимость</a>
+            </li>
+
+            <li class="header__link">
+              <a href="" class="a-1" aria-label="Читать Блог">Блог</a>
+            </li>
+
+            <li class="header__link">
+              <a href="" class="a-1" aria-label="Узнать Контакты">Контакты</a>
+            </li>
+          </ul>
+
+
+          <button class="header__close btn-icon btn-icon--close" data-modal-close="burger"
+                  type="button">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                    fill="currentColor" />
+            </svg>
+          </button>
+        </nav>
+        <a href="" class="header__btn-action btn--link btn--link--primary">Консультация</a>
+
+        <button class="header__btn-burger" data-modal-open="burger"
+                data-modal-src="0">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.5 7.5C4.5 7.10218 4.65804 6.72064 4.93934 6.43934C5.22064 6.15804 5.60218 6 6 6H24C24.3978 6 24.7794 6.15804 25.0607 6.43934C25.342 6.72064 25.5 7.10218 25.5 7.5C25.5 7.89782 25.342 8.27936 25.0607 8.56066C24.7794 8.84196 24.3978 9 24 9H6C5.60218 9 5.22064 8.84196 4.93934 8.56066C4.65804 8.27936 4.5 7.89782 4.5 7.5ZM4.5 15C4.5 14.6022 4.65804 14.2206 4.93934 13.9393C5.22064 13.658 5.60218 13.5 6 13.5H24C24.3978 13.5 24.7794 13.658 25.0607 13.9393C25.342 14.2206 25.5 14.6022 25.5 15C25.5 15.3978 25.342 15.7794 25.0607 16.0607C24.7794 16.342 24.3978 16.5 24 16.5H6C5.60218 16.5 5.22064 16.342 4.93934 16.0607C4.65804 15.7794 4.5 15.3978 4.5 15ZM13.5 22.5C13.5 22.1022 13.658 21.7206 13.9393 21.4393C14.2206 21.158 14.6022 21 15 21H24C24.3978 21 24.7794 21.158 25.0607 21.4393C25.342 21.7206 25.5 22.1022 25.5 22.5C25.5 22.8978 25.342 23.2794 25.0607 23.5607C24.7794 23.842 24.3978 24 24 24H15C14.6022 24 14.2206 23.842 13.9393 23.5607C13.658 23.2794 13.5 22.8978 13.5 22.5Z"
+                  fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Контент -->
+  <main>
+    <!-- Баннер -->
+    <section class="banner">
+      <div class="banner__container container">
+        <div class="banner__wrapper">
+
+          <h1 class="banner__title">Насладись прогулкой в горах
+            с командой единомышленников</h1>
+
+          <button class="banner__btn-modal btn btn--secondary" data-modal-open="form"
+                  data-modal-src="1">
+            Найти программу
+          </button>
+
+          <form action="" method="GET" class="banner__form form" data-modal="form"
+                data-modal-index="1" data-modal-device="mobile">
+
+            <div class="input-wrapper">
+              <select name="location" class="select-type-1 js-choice is-open">
+                <option value="">Локация для тура</option>
+                <option value="lhasa">Тибет, Лхаса - столица духовности</option>
+                <option value="kailash">Гора Кайлас - священная вершина</option>
+                <option value="sera">Монастырь Сера - центр буддизма</option>
+                <option value="yamdrok">Озеро Ямдрок - бирюзовая жемчужина</option>
+                <option value="potala">Дворец Потала - символ Тибета</option>
+                <option value="ganden">Монастырь Ганден - древняя обитель</option>
+                <option value="plateau">Тибетское нагорье - крыша мира</option>
+                <option value="tsangpo">Долина Цангпо - великое ущелье</option>
+                <option value="shigatse">Город Шигадзе - второй по значимости</option>
+                <option value="tashilhunpo">Монастырь Ташилунпо - резиденция Панчен-ламы</option>
+              </select>
+              <p class="input-description">
+                выберите из списка
+              </p>
+            </div>
+
+            <div class="input-wrapper">
+              <input name="date" id="date" type="text" class="input-type-1"
+                     placeholder="Дата похода">
+              <p class="input-description">
+                укажите диапазон
+              </p>
+            </div>
+
+            <div class="input-wrapper">
+              <select name="people" class="select-type-1 js-choice is-open">
+                <option value="">Количество человек</option>
+                <option value="1">1 человек</option>
+                <option value="2">2 человека</option>
+                <option value="3">3 человека</option>
+                <option value="4">4 человека</option>
+                <option value="5">5 человек</option>
+                <option value="6">6 человек</option>
+                <option value="7">7 человек</option>
+                <option value="8">8 человек</option>
+                <option value="9">9 человек</option>
+                <option value="10">10 человек</option>
+                <option value="10+">Более 10 человек</option>
+              </select>
+              <p class="input-description">
+                выберите из списка
+              </p>
+            </div>
+
+            <button class="btn btn--secondary">
+              Найти программу
+            </button>
+
+
+            <button class="form__close btn-icon btn-icon--close" data-modal-close="form"
+                    type="button">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                      fill="currentColor" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция о нас -->
+    <section class="about section about">
+      <div class="about__container container">
+        <div class="about__wrapper">
+          <div class="about__imgs-links">
+            <a class="about__imgs-link" data-position="" data-active="true" href=""
+               data-modal-open="video-1"
+               data-modal-src="2">
+              <picture>
+                <source srcset="./assets/imges/link-video.avif" type="image/avif">
+                <source srcset="./assets/imges/link-video.webp" type="image/webp">
+                <img src="./assets/imges/link-video.jpg" alt="Описание изображения">
+              </picture>
+            </a>
+            <a class="about__imgs-link" data-position="" data-active="false" href=""
+               data-modal-open="video-2"
+               data-modal-src="3">
+              <source srcset="./assets/imges/link-video-2.avif" type="image/avif">
+              <source srcset="./assets/imges/link-video-2.webp" type="image/webp">
+              <img src="./assets/imges/link-video-2.jpg" alt="Описание изображения">
+            </a>
+          </div>
+
+          <div class="about__text">
+            <h2>
+              <span>наше предложение</span>
+              <span>Исследуйте все горные массивы мира вместе с нами</span>
+            </h2>
+
+            <p class="p-1">Его корни уходят в один фрагмент классической латыни 45 года н.э., то
+              есть более двух
+              тысячелетий
+              назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния,
+              взял одно из
+              самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической
+              латинской
+              литературе.</p>
+
+            <a href="" class="btn--link btn--link--primary">Программа тура</a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция предложения -->
+    <section class="section application">
+      <div class="application__container container">
+        <div class="application__wrapper">
+          <div class="application__text-block">
+            <h2 class="application__title">
+              <span>наше предложение</span>
+              <span>Лучшие программы для тебя</span>
+            </h2>
+
+            <p class="application__text p-1">
+              Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
+              тысячелетий
+              назад. Ричард МакКлинток, профессор латыни из колледжа.
+            </p>
+
+            <ul class="application__list">
+
+              <li class="application__list-item">
+                <div class="application__list-item-icon">
+                  <img src="./assets/imges/icons/people.svg" alt="Иконка гид">
+                </div>
+                <div class="application__list-item-text">
+                  <h3>Опытный гид</h3>
+                  <p class="p-2">Для современного мира базовый вектор развития предполагает
+                    независимые способы
+                    реализации
+                    соответствующих условий активизации.</p>
+                </div>
+              </li>
+
+              <li class="application__list-item">
+                <div class="application__list-item-icon">
+                  <img src="./assets/imges/icons/safety.svg" alt=" Иконка безопасность">
+                </div>
+                <div class="application__list-item-text">
+                  <h3>Опытный гид</h3>
+                  <p class="p-2">Для современного мира базовый вектор развития предполагает
+                    независимые способы
+                    реализации
+                    соответствующих условий активизации.</p>
+                </div>
+              </li>
+
+              <li class="application__list-item">
+                <div class="application__list-item-icon">
+                  <img src="./assets/imges/icons/price.svg" alt="Иконка цены">
+                </div>
+                <div class="application__list-item-text">
+                  <h3>Опытный гид</h3>
+                  <p class="p-2">Для современного мира базовый вектор развития предполагает
+                    независимые способы
+                    реализации
+                    соответствующих условий активизации.</p>
+                </div>
+              </li>
+
+            </ul>
+
+            <a href="" class="header__btn-action btn--link btn--link--primary">Стоимость
+              программ</a>
+
+          </div>
+          <div class="application__imgs">
+            <picture>
+              <source srcset="./assets/imges/application.avif" type="image/avif">
+              <source srcset="./assets/imges/application.webp" type="image/webp">
+              <img src="./assets/imges/application.png" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Секция направления -->
+    <section class="section direction">
+      <div class="direction__container container">
+        <div class="direction__wrapper">
+
+          <h2 class="direction__title">
+            <span>по версии отдыхающих</span>
+            <span>Популярные направления</span>
+          </h2>
+
+          <div class="direction__cards">
+
+            <div class="direction__card card">
+              <div class="card__rating">
+                <img src="./assets/imges/icons/star.svg" alt="Звезда">
+                <span>4.5</span>
+              </div>
+              <picture>
+                <source srcset="./assets/imges/cards/1.avif" type="image/avif">
+                <source srcset="./assets/imges/cards/1.webp" type="image/webp">
+                <img class="card__img" src="./assets/imges/cards/1.jpg" alt="Описание изображения">
+              </picture>
+              <div class="card__info">
+                <div class="card__info-main">
+                  <h4>Озеро возле гор <span>романтическое приключение</span></h4>
+
+                  <div class="card__info-price">
+                    480 $
+                  </div>
+                </div>
+
+                <p class="p-2 card__info-text">
+                  Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более
+                  двух тысячелетий
+                  назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат
+                  Вирджиния, взял одно из
+                  самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в
+                  классической латинской
+                  литературе.
+                </p>
+
+                <a href="" class="card__btn btn--link btn--link--primary">Программа тура</a>
+              </div>
+            </div>
+
+            <div class="direction__card card">
+              <div class="card__rating">
+                <img src="./assets/imges/icons/star.svg" alt="Звезда">
+                <span>4.5</span>
+              </div>
+              <picture>
+                <source srcset="./assets/imges/cards/2.avif" type="image/avif">
+                <source srcset="./assets/imges/cards/2.webp" type="image/webp">
+                <img class="card__img" src="./assets/imges/cards/2.jpg" alt="Описание изображения">
+              </picture>
+              <div class="card__info">
+                <div class="card__info-main">
+                  <h4>Ночь в горах<span>в компании друзей</span></h4>
+
+                  <div class="card__info-price">
+                    500 $
+                  </div>
+                </div>
+
+                <p class="p-2 card__info-text">
+                  Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более
+                  двух тысячелетий
+                  назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат
+                  Вирджиния, взял одно из
+                  самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в
+                  классической латинской
+                  литературе.
+                </p>
+
+                <a href="" class="card__btn btn--link btn--link--primary">Программа тура</a>
+              </div>
+            </div>
+
+            <div class="direction__card card">
+              <div class="card__rating">
+                <img src="./assets/imges/icons/star.svg" alt="Звезда">
+                <span>4.5</span>
+              </div>
+              <picture>
+                <source srcset="./assets/imges/cards/3.avif" type="image/avif">
+                <source srcset="./assets/imges/cards/3.webp" type="image/webp">
+                <img class="card__img" src="./assets/imges/cards/3.jpg" alt="Описание изображения">
+              </picture>
+              <div class="card__info">
+                <div class="card__info-main">
+                  <h4>Йога в горах <span>для тех, кто забоится о себе</span></h4>
+
+                  <div class="card__info-price">
+                    250 $
+                  </div>
+                </div>
+
+                <p class="p-2 card__info-text">
+                  Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более
+                  двух тысячелетий
+                  назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат
+                  Вирджиния, взял одно из
+                  самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в
+                  классической латинской
+                  литературе.
+                </p>
+
+                <a href="" class="card__btn btn--link btn--link--primary">Программа тура</a>
+              </div>
+            </div>
+
+          </div>
+
+          <a href="" class="card__btn btn--link btn--link--primary section-btn">Рейтинг
+            направлений</a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция blog -->
+    <section class="section blog">
+      <div class="container blog__container">
+        <div class="blog__wrapper">
+
+          <h2 class="blog__title">
+            <span>делимся впечатлениями</span>
+            <span>Блог о путешествиях</span>
+          </h2>
+
+          <div class="blog__block-articles">
+
+            <article class="blog-article article">
+              <a href="">
+                <div class="article__img">
+                  <picture>
+                    <source srcset="./assets/imges/blog/1.avif" type="image/avif">
+                    <source srcset="./assets/imges/blog/1.webp" type="image/webp">
+                    <img class="card__img" src="./assets/imges/blog/1.jpg"
+                         alt="Описание изображения">
+                  </picture>
+                </div>
+
+                <div class="article__text">
+                  <h4>Красивая Италия, какая она в реальности?</h4>
+
+                  <p class="p-2">Для современного мира базовый вектор развития предполагает
+                    независимые способы
+                    реализации
+                    соответствующих условий активизации.</p>
+
+                  <div class="article__meta">
+                    <time datetime="2023-04-01">01/04/2023</time>
+
+                    <span>читать статью</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="blog-article article">
+              <a href="">
+                <div class="article__img">
+                  <picture>
+                    <source srcset="./assets/imges/blog/1.avif" type="image/avif">
+                    <source srcset="./assets/imges/blog/1.webp" type="image/webp">
+                    <img class="card__img" src="./assets/imges/blog/1.jpg"
+                         alt="Описание изображения">
+                  </picture>
+                </div>
+
+                <div class="article__text">
+                  <h4>Долой сомнения! Весь мир открыт для вас!</h4>
+
+                  <p class="p-2">Для современного мира базовый вектор развития предполагает
+                    независимые способы реализации
+                    соответствующих условий активизации ... независимые способы реализации
+                    соответствующих условий
+                    активизации </p>
+
+                  <div class="article__meta">
+                    <time datetime="2023-04-01">01/04/2023</time>
+
+                    <span>читать статью</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="blog-article article">
+              <a href="">
+                <div class="article__img">
+                  <picture>
+                    <source srcset="./assets/imges/blog/1.avif" type="image/avif">
+                    <source srcset="./assets/imges/blog/1.webp" type="image/webp">
+                    <img class="card__img" src="./assets/imges/blog/1.jpg"
+                         alt="Описание изображения">
+                  </picture>
+                </div>
+
+                <div class="article__text">
+                  <h4>Как подготовиться к путешествию в одиночку?</h4>
+
+                  <p class="p-2">Для современного мира базовый вектор развития предполагает.</p>
+
+                  <div class="article__meta">
+                    <time datetime="2023-04-01">01/04/2023</time>
+
+                    <span>читать статью</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="blog-article article">
+              <a href="">
+                <div class="article__img">
+                  <picture>
+                    <source srcset="./assets/imges/blog/1.avif" type="image/avif">
+                    <source srcset="./assets/imges/blog/1.webp" type="image/webp">
+                    <img class="card__img" src="./assets/imges/blog/1.jpg"
+                         alt="Описание изображения">
+                  </picture>
+                </div>
+
+                <div class="article__text">
+                  <h4>Индия ... летим?</h4>
+
+                  <p class="p-2">Для современного мира базовый.</p>
+
+                  <div class="article__meta">
+                    <time datetime="2023-04-01">01/04/2023</time>
+
+                    <span>читать статью</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <a href="" class="card__btn btn--link btn--link--primary section-btn">Другие
+            материалы</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section">
+      <div class="container gallery__container">
+        <div class="gallery__wrapper">
+          <h2 class="gallery__title">
+            <span>наше предложение</span>
+            <span>Лучшие программы для тебя</span>
+          </h2>
+
+          <div class="gallery__picture-links">
+            <a class="gallery__picture-link" href="" data-modal-open="gallery"
+               data-modal-src="./assets/imges/gallery/modal/1-L.jpg">
+              <picture>
+                <source
+                        media="(min-width: 1024px)"
+                        srcset="./assets/imges/gallery/1-large.jpg">
+                <img src="./assets/imges/gallery/1.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="gallery__picture-link" href="" data-modal-open="gallery"
+               data-modal-src="./assets/imges/gallery/modal/2-L.png">
+              <picture>
+                <img src="./assets/imges/gallery/2.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="gallery__picture-link" href="" data-modal-open="gallery"
+               data-modal-src="./assets/imges/gallery/modal/3-L.png">
+              <picture>
+                <img src="./assets/imges/gallery/3.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="gallery__picture-link" href="" data-modal-open="gallery"
+               data-modal-src="./assets/imges/gallery/modal/4-L.png">
+              <picture>
+                <img src="./assets/imges/gallery/4.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="gallery__picture-link" href="" data-modal-open="gallery"
+               data-modal-src="./assets/imges/gallery/modal/5-L.png">
+              <picture>
+                <source
+                        media="(min-width: 1024px)"
+                        srcset="./assets/imges/gallery/5-large.jpg">
+                <img src="./assets/imges/gallery/5.jpg" alt="">
+              </picture>
+            </a>
+
+            <a class="gallery__picture-link" href="" data-modal-open="gallery"
+               data-modal-src="./assets/imges/gallery/modal/6-L.png">
+              <picture>
+                <img src="./assets/imges/gallery/6.jpg" alt="">
+              </picture>
+            </a>
+          </div>
+
+
+          <button class="gallery__btn btn btn--primary section-btn">Наш pinterest</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__distribution container">
+      <div class="footer__distribution-wrapper">
+
+        <h2 class="footer__distribution-title">
+          <span>актуально</span>
+          <span>Получайте полезные рассылки о путешествиях</span>
+        </h2>
+
+        <div class="footer__distribution-form">
+          <form method="post" name="distribution" id="distribution-form">
+            <div class="input-wrapper">
+              <label for="distribution_email">Введите e-mail адрес</label>
+              <input type="text" name="distribution_email" id="distribution_email"
+                     class="input-type-2" placeholder="name@domain.com">
+            </div>
+
+            <button class="footer__distribution-btn btn btn--primary">
+              Подписаться на новости
+            </button>
+          </form>
+
+          <p>
+            подписываясь на новости, вы автоматически соглашаетесь с <a href="">условиями обработки
+              персональных данных</a> и
+            <a href="">правилами рекламных рассылок</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="footer__top-wrapper container">
+        <div class="footer__top-block">
+
+          <h3>Компания «РумТибет»</h3>
+
+          <div>
+            <p>Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
+              тысячелетий
+              назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney.</p>
+
+            <div class="footer__contact">
+              <a class="a-2" href="mailto:info@domain.com">info@domain.com</a>
+              <a class="a-2" href="tel:+7 (123) 456-78-90">+7 (123) 456-78-90</a>
+            </div>
+
+            <ul class="footer__socials">
+              <li>
+                <a href="">
+                  <img src="./assets/imges/icons/telegram.svg" width="32px" height="32px" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./assets/imges/icons/vk.svg" width="32px" height="32px" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./assets/imges/icons/pin.svg" width="32px" height="32px" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./assets/imges/icons/skype.svg" width="32px" height="32px" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__top-block">
+
+          <h3>Наши услуги</h3>
+
+          <ul>
+            <li>
+              <a href="" class="a-1">Прогулки в горы летом</a>
+            </li>
+
+            <li>
+              <a href="" class="a-1">Зимние походы в горы</a>
+            </li>
+
+            <li>
+              <a href="" class="a-1">Посещение храмов в горах</a>
+            </li>
+
+            <li>
+              <a href="" class="a-1">Экстремальные виды туризма</a>
+            </li>
+
+            <li>
+              <a href="" class="a-1">Походы в джунглях Амазонии</a>
+            </li>
+
+            <li>
+              <a href="" class="a-1">Поездка в Африку</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__top-block">
+
+          <h3>Важно для путешествий</h3>
+
+          <ul>
+            <li>
+              <a href="" class="a-1">Как собрать в долгий поход?</a>
+            </li>
+
+            <li>
+              <a href="" class="a-1">Жизненно важные предметы для похода</a>
+            </li>
+
+            <li>
+              <a href="" class="a-1">Медицинская страховка, гарантии безопасности</a>
+            </li>
+
+            <li>
+              <a href="" class="a-1">Если вы врач - загляните сюда</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom__wrapper container">
+        <cite>ИП Константинопольский К.К., 2023</cite>
+        <a href="" class="a-2">Политика обработки персональных данных</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/imask"></script>
+  <script type="module" src="./script/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+:root {
+  --primary-color: #1A3E3E;
+
+  /* Текст */
+  --text-black: #18121E;
+  --text-white: #FDFDFD;
+  --text-yellow: #F2BE22;
+
+  /* Кнопки */
+  --bg-btn-primary: #1A3E3E;
+  --bt--btn-secondary: #FDFDFD;
+}

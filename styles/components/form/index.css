@@ -1,0 +1,208 @@
+form {
+  display: flex;
+
+}
+
+
+input {
+  display: block;
+  padding: 12px 16px;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+  display: none;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]::after {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  right: 16px;
+  display: block;
+  background: url('./../../../assets/imges/icons/date.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  width: 20px;
+  height: 20px;
+
+
+  transform: translate(-50%, -50%);
+}
+
+
+.input-type-1 {
+  background-color: inherit;
+  border: 1px solid var(--text-white);
+  color: var(--text-white);
+
+  position: relative;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.input-type-1::placeholder {
+  color: var(--text-white);
+}
+
+.select-type-1 .choices__inner {
+  color: var(--text-white);
+  border: 1px solid var(--text-white);
+  background-color: inherit;
+}
+
+.select-type-1 .choices__list.is-active {
+  color: var(--text-black);
+  background-color: var(--text-white);
+}
+
+
+.input-type-2 {
+  background-color: #F3F5F4;
+  border: 1px solid var(--text-white);
+  color: var(--text-black);
+
+  position: relative;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.input-type-2::placeholder {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+.input-type-2:hover {
+  border-color: var(--text-black);
+}
+
+
+.select-type-2:hover {
+  border-color: var(--text-black);
+}
+
+
+/* Select Type 2 */
+.select-type-2 .choices__inner {
+  color: var(--text-black);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+}
+
+.select-type-2 .choices__list.is-active {
+  color: var(--text-white);
+  background-color: var(--bg-color-dark);
+}
+
+/* Для выпадающег */
+.choices {
+  position: relative;
+  margin-bottom: 0;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  display: block;
+  padding: 12px 16px !important;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  min-height: 52px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.choices__list--single .choices__item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+.choices__list--single {
+  padding: 0;
+  display: block;
+}
+
+
+.choices[data-type*=select-one]::after {
+  all: unset;
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 16px;
+  display: block;
+  background: url('./../../../assets/imges/icons/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.choices[data-type*=select-one].is-open::after {
+  margin: 0;
+  transform: rotate(270deg);
+}
+
+.choices__list.is-active {
+  border-radius: 8px;
+  border: 1px solid var(--text-white);
+}
+
+.choices__list--dropdown .choices__list,
+.choices__list[aria-expanded] .choices__list {
+  max-height: 125px;
+}
+
+
+.input-wrapper p {
+  padding-left: 8px;
+  margin-top: 8px;
+  color: #FDFDFD;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.input-wrapper label {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  margin-bottom: 8px;
+}

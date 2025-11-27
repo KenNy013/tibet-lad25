@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@font-face {
+  font-family: 'NEXT ART';
+  src: url('./../../assets/fonts/NEXT\ ART_Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-size: 16px;
+  font-family: Nunito Sans;
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.a-1 {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 26px;
+  color: var(--text-white);
+}
+
+
+.a-1::before {
+  content: "ᐳ";
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 14px;
+  font-family: unset;
+}
+
+.a-1:hover {
+  color: var(--text-yellow);
+}
+
+.a-1:hover::before {
+  content: "ᐳ";
+}
+
+.a-2 {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 26px;
+  color: var(--text-white);
+  text-decoration: underline !important;
+}
+
+.a-2:hover {
+  color: var(--text-yellow);
+}
+
+
+h1 {
+  font-family: NEXT ART;
+  font-weight: 700;
+  font-size: clamp(28px, 23.60px + 1.38vw, 50px);
+  line-height: 150%;
+  letter-spacing: 2%;
+  color: var(--text-white);
+}
+
+
+h2 {
+  font-weight: 800;
+  font-size: clamp(24px, 22.40px + 0.50vw, 32px);
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: var(--text-black);
+}
+
+h2 span {
+  display: block;
+}
+h2 span:first-child {
+  color: var(--text-yellow);
+  font-weight: 400;
+  font-size: clamp(16px, 14.40px + 0.50vw, 24px);
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 20px;
+}
+
+
+.p-1 {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+.p-2 {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: clamp(18px, 16.54px + 0.39vw, 24px);
+  line-height: 120%;
+}
+h4 span {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 18px;
+}

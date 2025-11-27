@@ -1,0 +1,106 @@
+.gallery__title {
+  text-align: start;
+  margin-bottom: clamp(32px, 30.15px + 0.51vw, 40px);
+}
+
+.gallery__picture-links {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+
+.gallery__picture-links .gallery__picture-link {
+  flex: 0 0 280px;
+  height: auto;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.gallery__picture-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(180, 41%, 17%, 0.3);
+  background-image: url('./../../../assets/imges/icons/loop.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.gallery__picture-link:hover::after {
+  opacity: 1;
+}
+
+.gallery__picture-links::-webkit-scrollbar {
+  height: 0px;
+}
+
+
+
+.gallery[open] {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100dvh;
+  width: 100%;
+  padding: 50px 16px;
+  background: rgba(21, 21, 21, 0.2);
+  backdrop-filter: blur(3px);
+  z-index: 300;
+  border: none;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  flex-direction: column;
+}
+
+.gallery[open] ul li {
+  margin-bottom: 24px;
+}
+
+.gallery[open].is-active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery[open] .gallery__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .gallery__title {
+    text-align: center;
+  }
+  .gallery__picture-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+  }
+
+  .gallery__picture-link:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .gallery__picture-link:nth-child(5) {
+    grid-column: span 2;
+  }
+}
