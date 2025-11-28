@@ -44,7 +44,7 @@ const loader = new Loader(document.getElementById("loader"))
         new Date().getDate() - 1
       ),
       max: new Date(
-        new Date().getFullYear() + 3,
+        new Date().getFullYear() + 10,
         new Date().getMonth(),
         new Date().getDate() - 1
       ),
@@ -69,7 +69,7 @@ const loader = new Loader(document.getElementById("loader"))
         Y: {
           mask: IMask.MaskedRange,
           from: new Date().getFullYear(),
-          to: new Date().getFullYear() + 3,
+          to: new Date().getFullYear() + 10,
         },
       },
       // Форматирование даты с полным годом
