@@ -51,6 +51,10 @@ a {
   background-image: url('./../../assets/imges/icons/arrow-yellow.svg');
 }
 
+.a-1:active::before {
+  background-image: url('./../../assets/imges/icons/arrow-yellow.svg');
+}
+
 .a-2 {
   font-weight: 400;
   font-size: 1rem;
