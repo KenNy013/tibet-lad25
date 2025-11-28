@@ -168,9 +168,11 @@
 
   header .a-1::before {
     content: '';
+    background-image: none;
   }
 
   header .a-1:hover::before {
     content: '';
+    background-image: none;
   }
 }

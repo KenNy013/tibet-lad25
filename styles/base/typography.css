@@ -19,6 +19,10 @@ body {
   }
 }
 
+a {
+  transition: all 0.3s ease;
+}
+
 .a-1 {
   font-weight: 400;
   font-size: 1rem;
@@ -26,13 +30,17 @@ body {
   color: var(--text-white);
 }
 
-
 .a-1::before {
-  content: "ᐳ";
+  content: '';
   display: inline-block;
   margin-right: 8px;
-  font-size: 14px;
+  width: 10px;
+  height: 14px;
   font-family: unset;
+  background-image: url('./../../assets/imges/icons/arrow.svg');
+  background-size: 10px;
+  background-position: top top;
+  background-repeat: no-repeat;
 }
 
 .a-1:hover {
@@ -40,7 +48,7 @@ body {
 }
 
 .a-1:hover::before {
-  content: "ᐳ";
+  background-image: url('./../../assets/imges/icons/arrow-yellow.svg');
 }
 
 .a-2 {
